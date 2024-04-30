@@ -1,7 +1,15 @@
+# FROM openjdk:17
+
+# ARG JAR_FILE=build/libs/*.jar
+# COPY ${JAR_FILE} backend.jar
+
+# ENTRYPOINT [ "java", "-jar", "/backend.jar" ]
+
 FROM openjdk:17
 
+WORKDIR /app-backend
+
 ARG JAR_FILE=build/libs/*.jar
-COPY ${JAR_FILE} backend.jar
+COPY ${JAR_FILE} vuespring.jar
 
 ENTRYPOINT [ "java", "-jar", "/backend.jar" ]
-
