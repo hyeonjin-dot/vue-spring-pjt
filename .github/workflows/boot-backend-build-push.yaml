@@ -22,6 +22,9 @@ jobs:
     - name: Grant jar
       run: chmod +x gradlew
 
+    - name: Change
+      run: dos2unix ./gradlew
+
     - name: Build jar
       run: ./gradlew build bootJAR
 
