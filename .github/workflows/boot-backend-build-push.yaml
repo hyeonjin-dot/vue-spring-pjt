@@ -24,3 +24,6 @@ jobs:
 
     - name: Build jar
       run: ./gradlew build bootJAR
+
+    - name: Docker buildx
+      uses: actions/setup-buildx-action@v2
