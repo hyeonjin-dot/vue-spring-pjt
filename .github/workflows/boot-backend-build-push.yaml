@@ -20,7 +20,7 @@ jobs:
         distribution: 'adopt'
     
     - name: Grant jar
-      run: chmod +x gradlew
+      run: chmod +x ./gradlew
 
     - name: Change
       run: tr -d '\r' < ./gradlew > ./gradlew.tmp && mv ./gradlew.tmp ./gradlew
