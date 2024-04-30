@@ -15,3 +15,5 @@ jobs:
     
     - name: SetUp JDK
       uses: actions/setup-java@v2
+      with:
+        java-version: '17'
