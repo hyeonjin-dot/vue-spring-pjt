@@ -23,7 +23,7 @@ jobs:
       run: chmod +x gradlew
 
     - name: Change
-      run: dos2unix ./gradlew
+      run: tr -d '\r' < ./gradlew > ./gradlew.tmp && mv ./gradlew.tmp ./gradlew
 
     - name: Build jar
       run: ./gradlew build bootJAR
